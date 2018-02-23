@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="94e85a76e1634eb68762662231d7beac" Name="Diagram1" ZoomLevel="75">
+        <EntityTypeShape EntityType="WebSalehModel.C__MigrationHistory" Width="1.5" PointX="6.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebSalehModel.AspNetRoles" Width="1.5" PointX="0.5" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebSalehModel.AspNetUserClaims" Width="1.5" PointX="4.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebSalehModel.AspNetUserLogins" Width="1.5" PointX="4.5" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebSalehModel.AspNetUsers" Width="1.5" PointX="2.375" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebSalehModel.OrderDetails" Width="1.5" PointX="6.625" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebSalehModel.Orders" Width="1.5" PointX="4.5" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="WebSalehModel.Products" Width="1.5" PointX="8.75" PointY="3" IsExpanded="true" />
+        <AssociationConnector Association="WebSalehModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="WebSalehModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="WebSalehModel.FK_dbo_Orders_dbo_AspNetUsers_People_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WebSalehModel.FK_dbo_OrderDetails_dbo_Orders_Order_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WebSalehModel.FK_dbo_OrderDetails_dbo_Products_Products_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="WebSalehModel.AspNetUserRoles" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

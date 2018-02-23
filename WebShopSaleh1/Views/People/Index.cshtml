@@ -1,0 +1,52 @@
+﻿@model System.Data.DataTable
+@using System.Data
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Display Database and storing in asp.net MVC</h2>
+@*Header of the tabel*@
+<div style="width:90%; margin:0 auto;">
+    <table id="myTable" >
+        <thead>
+            <tr>
+            <!--<th>id</th>-->
+                <th>Full Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@*Load datatable css*@
+<link href="~/Content/DataTables/css/jquery.dataTables.css" rel="stylesheet" />
+
+@*Load datatable js library*@
+@section Scripts{
+
+<script src="~/Scripts/DataTables/jquery.dataTables.js"></script>
+   <script>
+       $(document).ready(function () {
+           $("#myTable").DataTable({
+               "proccessing": true, // for show progress bar
+               "serverSide": true,  // for process server side
+               "filter": false,     // this is for disable filter (search box)
+               "orderMulti": false, // for disable multiple column at once
+               "ajax": {
+                   "url": "/People/loaddata",
+                   "type": "GET",
+                   "datatype":"json"
+                        },
+               "columns": [
+                // { "data": "Id", "autoWidth": true },
+                   { "data": "FullName", "autoWidth": true },
+                   { "data": "Address",  "autoWidth": true },
+                   { "data": "City", "autoWidth": true },
+                   { "data": "Email", "autoWidth": true }
+                          ]
+                                   });
+                                     });
+    </script>
+                }
